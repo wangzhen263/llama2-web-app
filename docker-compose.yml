@@ -1,0 +1,16 @@
+version: "3"
+services:
+  llama2_web_app:
+    container_name: llama2_web_app
+    build: .
+    ports:
+      - "8066:8066"
+    volumes:
+      - .:/work
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
