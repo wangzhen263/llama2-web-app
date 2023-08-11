@@ -1,0 +1,6 @@
+cmake
+scikit-build
+fastapi
+uvicorn
+sse-starlette
+pydantic-settings
